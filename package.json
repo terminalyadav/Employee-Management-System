@@ -1,0 +1,47 @@
+{
+  "name": "hrms",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "nodemon ./bin/www",
+    "dev:debug": "DEBUG=hrms:* nodemon ./bin/www",
+    "prod": "NODE_ENV=production node ./bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "seed": "node ./seed/user-seeder.js",
+    "db:seed": "node ./seed/user-seeder.js",
+    "db:reset": "node ./seed/reset.js",
+    "lint": "echo \"Add ESLint configuration for linting\"",
+    "format": "echo \"Add Prettier configuration for formatting\"",
+    "logs": "tail -f logs/app.log",
+    "clean": "rm -rf node_modules package-lock.json && npm install",
+    "update": "npm update && npm audit fix",
+    "security": "npm audit",
+    "prestart": "echo \"Starting Employee Management System...\"",
+    "postinstall": "echo \"Dependencies installed successfully\""
+  },
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "~1.15.2",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^4.6.0",
+    "cookie-parser": "~1.4.3",
+    "csurf": "^1.9.0",
+    "debug": "~2.2.0",
+    "dotenv": "^16.5.0",
+    "ejs": "~2.5.2",
+    "express": "~4.14.0",
+    "express-session": "^1.14.2",
+    "express-validator": "^2.21.0",
+    "moment": "^2.17.0",
+    "mongoose": "^6.13.8",
+    "mongoose-type-email": "^1.0.2",
+    "morgan": "~1.7.0",
+    "passport": "^0.3.2",
+    "passport-local": "^1.0.0",
+    "serve-favicon": "~2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
